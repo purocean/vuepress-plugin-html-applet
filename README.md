@@ -5,9 +5,9 @@ Allow you to embed HTML Applet iframe to your Vuepress article.
 ## Installation
 
 ```shell
-yarn add vuepress-html-applet -D
+yarn add vuepress-plugin-html-applet -D
 # or
-npm i vuepress-html-applet -D
+npm i vuepress-plugin-html-applet -D
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ Add the following to your `config.js`:
 ```js
 module.exports = {
   plugins: [
-    'vuepress-html-applet'
+    'html-applet'
   ]
 }
 ```
