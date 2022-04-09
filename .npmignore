@@ -1,0 +1,16 @@
+.DS_Store
+.npmignore
+.gitignore
+.editorconfig
+.eslintrc.js
+.prettierrc
+
+node_modules/
+test/
+dist/
+docs/
+examples/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json

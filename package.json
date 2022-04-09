@@ -1,0 +1,25 @@
+{
+    "name": "vuepress-plugin-html-applet",
+    "version": "0.0.1",
+    "main": "index.js",
+    "type": "commonjs",
+    "description": "a vuepress plugin to embed html applet",
+    "author": "purocean <purocean@gmail.com>",
+    "license": "MIT",
+    "repository": "https://github.com/purocean/vuepress-plugin-html-applet",
+    "bugs": {
+      "url": "https://github.com/purocean/vuepress-plugin-html-applet/issues"
+    },
+    "homepage": "https://github.com/purocean/vuepress-plugin-html-applet",
+    "doc": "https://github.com/purocean/vuepress-plugin-html-applet",
+    "scripts": {
+      "dev": "vuepress dev docs",
+      "serve": "vuepress dev docs",
+      "build": "vuepress build docs"
+    },
+    "keywords": [
+      "vuepress",
+      "vuepress-plugin",
+      "iframe"
+    ]
+  }
