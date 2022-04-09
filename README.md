@@ -1,6 +1,6 @@
 # Vuepress HTML Applet Plugin
 
-Allow you to embed HTML Applet iframe to your Vuepress article.
+Embed HTML Applet iframe to your Vuepress article.
 
 ## Installation
 
