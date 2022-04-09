@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-html-applet",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "index.js",
     "type": "commonjs",
     "description": "a vuepress plugin to embed html applet",
