@@ -42,6 +42,7 @@ The first line of the HTML code block needs to contain the string `--applet--`.
 ## Options
 
 - `useSrcdoc`: whether to use `srcdoc` attribute instead of `src`. Default is `false`.
+- `showCode`: whether to show the HTML code block. Default is `false`.
 
 ## Example Page
 

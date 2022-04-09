@@ -2,7 +2,7 @@ const path = require('path')
 const { escapeHtml } = require('markdown-it/lib/common/utils')
 const CopyPlugin = require('copy-webpack-plugin')
 
-const MarkdownItPlugin = ({ useSrcdoc }, ctx) => (md) => {
+const MarkdownItPlugin = ({ useSrcdoc, showCode }, ctx) => (md) => {
   const temp = md.renderer.rules.fence.bind(md.renderer.rules)
 
   md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
@@ -38,13 +38,25 @@ const MarkdownItPlugin = ({ useSrcdoc }, ctx) => (md) => {
 
     const style = `border: none; width: 100%; height: 20px;`
 
+    let htmlCode;
     if (useSrcdoc) {
-      return `<iframe style="${style}" srcdoc="${escapeHtml(html)}"></iframe>`
+      htmlCode = `<iframe class="applet-iframe" style="${style}" srcdoc="${escapeHtml(html)}"></iframe>`
+    } else {
+      const src = `${ctx.base}${iframeFilename}#html=${encodeURIComponent(html)}`
+      htmlCode = `<iframe class="applet-iframe" style="${style}" src="${src}"></iframe>`
     }
 
-    const src = `${ctx.base}${iframeFilename}#html=${encodeURIComponent(html)}`
+    if (showCode) {
+      return `<div class="applet-wrapper">
+        ${htmlCode}
+        <details class="applet-code">
+          <summary style="cursor: pointer">Show Code</summary>
+          ${temp(tokens, idx, options, env, slf)}
+        </details>
+      </div>`
+    }
 
-    return `<iframe style="${style}" src="${src}"></iframe>`
+    return htmlCode
   }
 }
 
