@@ -17,14 +17,16 @@ Add the following to your `config.js`:
 ```js
 module.exports = {
   plugins: [
-    'html-applet'
+    'html-applet',
+    // or
+    // ['html-applet', { useSrcdoc: true }],
   ]
 }
 ```
 
 Write html code in markdown like this:
 
-The first line of the HTML code block needs to contain the string --applet--.
+The first line of the HTML code block needs to contain the string `--applet--`.
 
 ~~~markdown
 ```html
@@ -36,6 +38,10 @@ The first line of the HTML code block needs to contain the string --applet--.
 </div>
 ```
 ~~~
+
+## Options
+
+- `useSrcdoc`: whether to use `srcdoc` attribute instead of `src`. Default is `false`.
 
 ## Example Page
 
